@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bs520/css/bootstrap.css">
+</head>
+<body>
+    <P>1</P>
+    
+    <div class="alert alert-primary">A simple primary alert—check it out!</div>
+
+<P>2</P>
+<form action="https://tw.yahoo.com">
+    <p><label for="">姓名：</label><input name="user" type="text"></p>
+    <p>
+        <!-- <input type="submit" value="我是submit">
+        <input type="reset" value="我是reset">
+        <input type="button" value="我是button-建立新帳號" onclick="location.href='https://member.pchome.com.tw/apply.html'"> -->
+
+        <button class="btn btn-primary">送出</button>
+    </p>
+</form>
+
+<p>3</p>
+
+    <button class="btn btn-primary" type="submit" onclick="location.href='https://google.com'">Button</button>
+
+<p>4</p>
+    
+   <a class="btn btn-primary" href="http://www.google.com" role="button">Link</a>
+
+<p>5</p>
+   
+
+    <input class="btn btn-primary" type="button" value="Input">
+    <input class="btn btn-primary" type="submit" value="Submit">
+    <input class="btn btn-primary" type="reset" value="Reset">
+
+<p>6</p>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+<p>7</p>
+
+<!-- <div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">按這邊</button> -->
+
+<p>8</p>
+
+<div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">按他</button>
+
+<p>9</p>
+
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    const alert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+    }
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            alert('付款已完成 !!!', 'success')
+        })
+    }
+</script>
+
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="bs520/js/bootstrap.bundle.js"></script>
+</body>
+</html>
