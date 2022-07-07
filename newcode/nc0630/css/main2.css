@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@900&display=swap');
+
+body{
+    background-image: url(../images/bg1.jpg);
+    font-family: 'Noto Sans TC', sans-serif;
+    /* font-family: 'Noto Serif TC', serif; */
+    }
+
+header{
+    height: 90px;
+    position: relative;
+}
+
+#logo{
+    /* margin-top:20px; */
+    /* margin-left:40px; */
+    /* 簡化的寫法 */
+    /* margin: 20px 0 0 40px; */
+    /* margin會影響旁邊的物件，有點類似上體育課保持距離時會影響旁邊同學的定位 */
+    /* position: relative 相對定位，以自身原本的位置為基準去設定上下左右。 */
+    position: relative;
+    top:20px;
+    left:20px;
+    /* static 原始位置 預設位置 */
+    /* position不會影響其他物件，他只會作用在自身身上，每個物件都有獨立的個體空間。 */
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+#mainNav{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    /* border: 1px solid red; */
+    /* 這個是控制nav不要去壓蓋到logo */
+    width: calc(100% - 300px);
+}
+
+/* 子代選取器 */
+#mainNav>ul{
+    display: flex;
+    
+}
+
+#mainNav>ul>li{
+    /* border: 1px solid yellow; */
+    flex: 1;
+}
+
+#mainNav>ul>li:hover ul{
+display: block;
+
+}
+
+#mainNav ul li a{
+/* border: 1px solid red; */
+text-align: center;
+display: block;
+color: rgb(27, 82, 27);
+}
+
+#mainNav>ul>li>a{
+    padding-bottom: 2px;
+}
+
+#mainNav>ul>li>a:hover{
+background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgba(255, 255, 255, 0) 65%);
+
+}
+
+/* #mainNav>ul>li>a::before{
+    content:"";
+    background-image: url(/nc0630/images/mainIcon.png);
+
+    background-position: 0 0;
+    
+    width: 16px;
+    height: 16px;
+    display:inline-block;
+
+    border: 1px solid red;
+    overflow: hidden;
+
+    position: relative;
+    top:2px;
+
+    left: 5px;
+
+    margin-right: 3px;
+    transform: .5s;
+}  */
+
+#mainNav>ul>li>a{
+    /* border: 1px solid red; */
+    display: flex;  
+}
+
+#mainNav>ul>li>a>span{
+    /* border: 1px solid red; */
+    width: 16px;
+    height: 16px;
+    background: url(/nc0630/images/mainIcon.png);
+        display: block;
+    position: relative;
+    top: 4px;
+    left: 0px;
+    }
+
+    /* #mainNav>ul>li>a:nth-of-type(2)>span::before{
+        background-position: -16px 0;
+    } */
+
+
+
+
+/* #mainNav>ul>li:nth-of-type(2)>a::before{
+    background-position: -16px 0;
+}
+
+#mainNav>ul>li:nth-of-type(3)>a::before{
+    background-position: -32px 0;
+}
+
+#mainNav>ul>li:nth-of-type(4)>a::before{
+    background-position: -48px 0;
+}
+
+#mainNav>ul>li:nth-of-type(5)>a::before{
+    background-position: -64px 0;
+}
+#mainNav>ul>li:nth-of-type(6)>a::before{
+    background-position: -80px 0;
+}
+
+#mainNav>ul>li:nth-of-type(1)>a:hover::before{
+    background-position: 0 -16px;
+}
+
+#mainNav>ul>li:nth-of-type(2)>a:hover::before{
+    background-position: -16px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(3)>a:hover::before{
+    background-position: -32px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(4)>a:hover::before{
+    background-position: -48px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(5)>a:hover::before{
+    background-position: -64px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(6)>a:hover::before{
+    background-position: -80px -16px;
+} */
+
+#mainNav ul ul{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px 0;
+    display: none;
+}
+
+#mainNav ul ul li:hover{
+        border-bottom: 1px dashed rgb(17, 61, 17);
+}
+
+#mainNav ul ul li{
+    margin: 0px 12px 8px 12px;
+    /* border-bottom: 1px dashed rgb(17, 61, 17); */
+    padding-bottom: 5px;
+    border-bottom: 0.1px dashed rgba(17, 61, 17, 0);
+}
+
+#mainNav>ul>li>a{
+    /* font-family: 'Noto Serif TC', serif; */
+    font-weight: 600;
+}
+
+#mainNav ul ul li a{
+font-size: 0.95em;
+font-weight: 400;
+}
+
+/* #mainNav ul ul li a:hover{
+    border-bottom: 0.1px dashed rgb(17, 61, 17);
+} */
+
+#memNav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    
+    }
+
+#memNav ul{
+    margin: 0;
+    padding: 0 20px;
+    background-color: rgba(80, 124, 54, 0.582);
+    border-radius: 12px;
+    /* border: 1px solid red; */
+}
+
+#memNav ul li{
+    float: left;
+    margin: 0 8px;
+    /* padding: 0 5px; */
+    /* width: 100px; */
+    /* background-color: rgb(255, 255, 255); */
+}
+
+#memNav ul a{
+    /* 去掉底線 */
+    /* text-decoration: none; */
+    color: white;
+    font-size: 0.95em;
+    font-weight: 100;
+    /* letter-spacing: 0.05em; */
+    /* color: rgb(253, 5, 5); */
+    /* border: 1px solid red; */
+    /* display: block; */
+    /* text-align: center; */
+    padding-left: 20px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+#memNav ul a i{
+    transform: .5s;
+    position: absolute;
+    left:0px;
+}
+
+#memNav ul a i:first-of-type{
+    top: 4px;
+    
+}
+
+#memNav ul a:hover i:first-of-type{
+    top:-17px;
+}
+
+#memNav ul a i:last-of-type{
+    color: yellow;
+    top: 25px;
+    /* transform: 0.5s; */
+}
+
+#memNav ul a:hover i:last-of-type{
+    top:4px;
+}
+
+
+/* 為了展示框架架構而寫的語法，banner的區塊設定為body的百分之８０趴，在畫面上Banner就會呈現在視窗的百分之８０趴的寬度 */
+#banner{
+    /* border: 2px solid red;
+    display: block;
+    width: 80%; */
+}
+
+#banner img{
+    /* 100%是跟著banner的框架寬的走，而banner是跟著bady框架走。所以會形成視窗多大，Banner就多寬的現象。 */
+    width: 100%;
+}
+
+main{
+    min-height: 300px;
+    /* height: 20px; */
+    /* background-image: linear-gradient(to right, red,white,yellow,orange); */
+}
+
+footer{
+    font-family: 'Noto Serif TC', serif;
+    background-color: rgba(72, 124, 68, 0.476);
+    /* height: 120px; */
+    padding: 30px;
+   }
+
+#footerList{
+    display: flex;
+    /*  */
+    margin-bottom: 20px;
+}
+
+.footerItem{
+    /* border: 1px solid red; */
+    /* 均分 flex:１ 總和佔比*/
+    flex: 1;
+    /* text-align: center;置中 */
+    text-align: center;
+    border-right:1px dashed rgb(38, 54, 22) ;
+    /* border只有粗細、樣式、顏色 */
+    padding: 30px 0 30px 0 ;
+    position: relative;
+    
+}
+
+/* 因為指令為全部的右邊都有虛線，所以需要再下一個拿掉坐右邊的虛線，只留下中間兩條 */
+.footerItem:last-of-type{
+    border: none;
+}
+
+/* .item2{
+    flex: 2;
+} */
+
+.footerItem h2{
+    font-size: 1.2em;
+    color: rgb(11, 54, 32);
+    margin: 0 0 8px 0 ;
+    letter-spacing: 0.3em;
+    /* font-weight: 700; */
+}
+
+.footerItem h2 i{
+    font-size: 120px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.footerItem p{
+    font-size: 0.95em;
+    color: rgb(19, 61, 28);
+    margin: 0 0 2px 0;
+    font-weight: 100;
+}
+
+#copyright{
+    /* margin-top: 20px; */
+    text-align: center;
+    display: block;
+}
+
+.clr::after{
+    content: "";
+    display: block;
+    clear: both;
+    /* clear: both; */
+}
