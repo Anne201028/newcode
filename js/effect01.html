@@ -14,12 +14,16 @@ a {
 <script src="/jquery-3.6.0.min.js"></script>
 <script>
 $(function(){
-    $('p.more').hide();
+    $('p.more,a.less').hide();
 	$('a.more').click(function(){
 		$('p.more').show();
+		$('a.less').show();
+		$(this).hide()
 	})
 	$('a.less').click(function(){
 		$('p.more').hide();
+		$('a.more').show();
+		$(this).hide();
 	})
 });
 </script>
