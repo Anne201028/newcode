@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>jquery控制css</title>
     <script src="/jquery-3.6.0.min.js"></script>
     <script>
-        $('document').ready(function(){
-            
+        // 替代$('document').ready(function(){}) 寫成 $(function(){})
+        
+        $(function(){
+            // 單一屬性
+            // 對象.css('屬性名稱','值');
+
+            $('h2').css('color','red')
+                   .css('font-size','30px');
+
+            // 多屬性.css
+            // 對象.css({
+            //     '屬性名稱':'值',
+            //     '屬性名稱':'值',
+            //     .............
+            //    })
+
+            $('p').css({
+                'color':'blue',
+                'font-size':'9px'
+                })
+
+
         })
     </script>
 </head>
