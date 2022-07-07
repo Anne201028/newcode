@@ -20,7 +20,7 @@
             // }
 
             // for 迴圈
-            // for(起始值;條件式;值得增減){
+            // for(起始值;條件式;值的增減){
             //     符合條件的執行程序
             // }
             //     不符合此條件 會自動結束
@@ -28,13 +28,18 @@
             // 先將列表儲存
             var list=$('ul li');
                 // 先宣告起始值用i當作索引值
-            for(var i=0;i<list.length;i++){
+            for(var i=0;i<10;i++){
                 // if(list.eq(1).html());
                 if(list.eq(i).html()<60){
                     list.eq(i).css({'color':'red'})
                 }
             }
-            
+            // for(var i=0;i<10;i++){
+            //     // if(list.eq(1).html());
+            //     if(list.eq(i).html()60){
+            //         list.eq(i).css({'color':'red'})
+            //     }
+            // }
 
 
 
