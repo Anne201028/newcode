@@ -76,6 +76,64 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
 
 }
 
+#mainNav>ul>li>a::before{
+    content:"";
+    background-image: url(/nc0630/images/mainIcon.png);
+    /* background-position: 0 0; */
+    width: 16px;
+    height: 16px;
+    display:inline-block;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+    position: relative;
+    top:2px;
+    /* left: 5px; */
+    margin-right: 3px;
+    transform: .5s;
+}
+
+#mainNav>ul>li:nth-of-type(2)>a::before{
+    background-position: -16px 0;
+}
+
+#mainNav>ul>li:nth-of-type(3)>a::before{
+    background-position: -32px 0;
+}
+
+#mainNav>ul>li:nth-of-type(4)>a::before{
+    background-position: -48px 0;
+}
+
+#mainNav>ul>li:nth-of-type(5)>a::before{
+    background-position: -64px 0;
+}
+#mainNav>ul>li:nth-of-type(6)>a::before{
+    background-position: -80px 0;
+}
+
+#mainNav>ul>li:nth-of-type(1)>a:hover::before{
+    background-position: 0 -16px;
+}
+
+#mainNav>ul>li:nth-of-type(2)>a:hover::before{
+    background-position: -16px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(3)>a:hover::before{
+    background-position: -32px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(4)>a:hover::before{
+    background-position: -48px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(5)>a:hover::before{
+    background-position: -64px -16px;
+}
+
+#mainNav>ul>li:nth-of-type(6)>a:hover::before{
+    background-position: -80px -16px;
+}
 
 #mainNav ul ul{
     background-color: rgba(255, 255, 255, 0.5);
@@ -84,7 +142,7 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
 }
 
 #mainNav ul ul li:hover{
-        border-bottom: 0.1px dashed rgb(17, 61, 17);
+        border-bottom: 1px dashed rgb(17, 61, 17);
 }
 
 #mainNav ul ul li{
@@ -134,16 +192,46 @@ font-weight: 400;
 
 #memNav ul a{
     /* 去掉底線 */
-    text-decoration: none;
+    /* text-decoration: none; */
     color: white;
     font-size: 0.95em;
     font-weight: 100;
-    letter-spacing: 0.05em;
+    /* letter-spacing: 0.05em; */
     /* color: rgb(253, 5, 5); */
     /* border: 1px solid red; */
     /* display: block; */
     /* text-align: center; */
+    padding-left: 20px;
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
+
+#memNav ul a i{
+    transform: .5s;
+    position: absolute;
+    left:0px;
+}
+
+#memNav ul a i:first-of-type{
+    top: 4px;
+    
+}
+
+#memNav ul a:hover i:first-of-type{
+    top:-17px;
+}
+
+#memNav ul a i:last-of-type{
+    color: yellow;
+    top: 25px;
+    /* transform: 0.5s; */
+}
+
+#memNav ul a:hover i:last-of-type{
+    top:4px;
+}
+
 
 /* 為了展示框架架構而寫的語法，banner的區塊設定為body的百分之８０趴，在畫面上Banner就會呈現在視窗的百分之８０趴的寬度 */
 #banner{
@@ -168,7 +256,7 @@ footer{
     background-color: rgba(72, 124, 68, 0.476);
     /* height: 120px; */
     padding: 30px;
-}
+   }
 
 #footerList{
     display: flex;
@@ -185,6 +273,7 @@ footer{
     border-right:1px dashed rgb(38, 54, 22) ;
     /* border只有粗細、樣式、顏色 */
     padding: 30px 0 30px 0 ;
+    position: relative;
     
 }
 
@@ -203,6 +292,17 @@ footer{
     margin: 0 0 8px 0 ;
     letter-spacing: 0.3em;
     /* font-weight: 700; */
+}
+
+.footerItem h2 i{
+    font-size: 120px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .footerItem p{
