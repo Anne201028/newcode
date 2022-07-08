@@ -11,17 +11,27 @@ a {
 	text-decoration: none;
 }
 </style>
-<script src="/jquery-3.6.0.min.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
 <script>
 $(function(){
+
+	// show(時間),hide(時間)
+	// ms
+	// 沒有設定時間→直接顯示或隱藏
+	// 有設定時間→動態的展開與收合
+
+	// slideDown(),slideUp()
+	// fadeIn(),fadeOut()
+	// 預設時間(400)ms
+
     $('p.more,a.less').hide();
 	$('a.more').click(function(){
-		$('p.more').show();
+		$('p.more').fadeIn(500);
 		$('a.less').show();
 		$(this).hide()
 	})
 	$('a.less').click(function(){
-		$('p.more').hide();
+		$('p.more').slideUp(500);
 		$('a.more').show();
 		$(this).hide();
 	})

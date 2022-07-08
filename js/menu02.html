@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>menu2</title>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	background-color: #69F;
+	width: 880px;
+	height: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	position:relative;
+	z-index:3;
+}
+#nav {
+	width: 880px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	background-color: #FF9;
+	height: 50px;
+}
+#nav li {
+	height: 50px;
+	width: 176px;
+	float: left;
+	list-style-type: none;
+	position: relative;
+	font-size: 16px;
+}
+#nav li a {
+	font-family: Arial, "微軟正黑體", "Adobe 繁黑體 Std B", sans-serif;
+	text-decoration: none;
+	color: #930;
+	display: block;
+	height: 25px;
+	width: 174px;
+	line-height: 25px;
+	position: absolute;
+	background-color: #FC3;
+	border: 1px solid #C60;
+	text-align: center;
+	top: -21px;
+	padding-top: 25px;
+}
+</style>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+	$('#nav li').hover(function(){
+		$(this).children('a').stop().animate({'top':-5},500,'easeOutBounce')
+	},function(){
+		$(this).children('a').stop().animate({'top':-21},500)
+	})
+});
+</script>
+</head>
+
+<body>
+<div id="header"> header</div>
+<ul id="nav">
+  <li><a href="#">ABOUT</a></li>
+  <li><a href="#">NEWS</a></li>
+  <li><a href="#">SERVICES</a></li>
+  <li><a href="#">MEMBERS</a></li>
+  <li><a href="#">CONTACT</a></li>
+</ul>
+</body>
+</html>

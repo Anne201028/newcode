@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>effect03 滑入 滑出 淡入淡出效果</title>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    // 透明度
+    $('img').css({'opacity':'0.3'})
+
+    // $('img').mouseenter(function(){
+    //             fadeTo(時間,透明度)
+    //     $(this).fadeTo(500,1)
+    // })
+    // $('img').mouseleave(function(){
+    //     $(this).fadeTo(500,0.3)
+    // })
+
+    // 對象.hover(function(){
+    //      ...mouseenter...
+    // },founction(){
+    //      ...mouseleave...
+    // })
+
+    $('img').hover(function(){
+        // .stop防止動畫一直持續，但鼠標已離開作用地，造成觀看者不知道目前鼠標位置，因為會被動畫吸引目光，導致使用者體驗不佳。
+        $(this).stop().fadeTo(1000,1)
+    },function(){
+        $(this).stop().fadeTo(1000,0.3)
+    })
+
+});
+</script>
+</head>
+
+<body>
+<img src="images/img01s.jpg" width="200">
+<img src="images/img02s.jpg" width="200">
+<img src="images/img03s.jpg" width="200">
+</body>
+
+</html>

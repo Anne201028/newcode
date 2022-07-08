@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<title>comboEvent03</title>
+<style type="text/css">
+* {	margin: 0px; padding: 0px; }
+html, body { background-color: #EDE7DE;	height: 100%; }
+.left {	width: 200px; height: 100%;	background-color: #454545; }
+#menu {	width: 200px; }
+#menu>li { background-color: #333; list-style-type: none; }
+#menu li h2 {
+	background-color: #414141;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 12px;
+	color: #FFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999;
+}
+#menu li ul { list-style-type: none; display: none; }
+#menu li ul li a {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+	padding: 10px;
+	font-size: 12px;
+	width: 180px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #3D3D3D;
+}
+#menu li ul li a:hover { background-color: #666; }
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(function(){
+    
+});
+</script>
+</head>
+
+<body>
+<div class="left">
+  <ul id="menu">
+    <li>
+      <h2 id="menu1"><span id="Getting_Started">SELECTORS</span></h2>
+      <ul>
+        <li><a href="http://api.jquery.com/category/selectors/attribute-selectors/">Attribute</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/basic-css-selectors/">Basic</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/basic-filter-selectors/">Basic Filter</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/child-filter-selectors/">Child Filter</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/content-filter-selector/">Content Filter</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/form-selectors/">Form</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/hierarchy-selectors/">Hierarchy</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/jquery-selector-extensions/">jQuery Extensions</a></li>
+        <li><a href="http://api.jquery.com/category/selectors/visibility-filter-selectors/">Visibility Filter</a></li>
+      </ul>
+    </li>
+    <li>
+      <h2 id="menu2"><span id="Plugins">EFFECTS</span></h2>
+      <ul>
+        <li><a href="http://api.jquery.com/category/effects/basics/">basics</a></li>
+        <li><a href="http://api.jquery.com/category/effects/custom-effects/">Custom</a></li>
+        <li><a href="http://api.jquery.com/category/effects/fading/">Fading</a></li>
+        <li><a href="http://api.jquery.com/category/effects/sliding/">Sliding</a></li>
+      </ul>
+    </li>
+    <li>
+      <h2 id="menu3"><span id="Support">EVENTS</span></h2>
+      <ul>
+        <li><a href="http://api.jquery.com/category/events/browser-events/">Browser Events</a></li>
+        <li><a href="http://api.jquery.com/category/events/document-loading/">Document Loading</a></li>
+        <li><a href="http://api.jquery.com/category/events/form-events/">Form Events</a></li>
+        <li><a href="http://api.jquery.com/category/events/keyboard-events/">Keyboard Events</a></li>
+        <li><a href="http://api.jquery.com/category/events/mouse-events/">Mouse Events</a></li>
+      </ul>
+    </li>
+    <li>
+      <h2 id="menu4"><span id="About_jQuery">AJAX</span></h2>
+      <ul>
+        <li><a href="http://api.jquery.com/category/ajax/global-ajax-event-handlers/">Global Ajax Event Handlers</a></li>
+        <li><a href="http://api.jquery.com/category/ajax/helper-functions/">Helper Functions</a></li>
+        <li><a href="http://api.jquery.com/category/ajax/low-level-interface/">Low-Level Interface</a></li>
+        <li><a href="http://api.jquery.com/category/ajax/shorthand-methods/">Shorthand Methods</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

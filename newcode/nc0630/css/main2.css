@@ -99,21 +99,26 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
 }  */
 
 #mainNav>ul>li>a{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;  
+    border: 1px solid red;
+    /* display: flex; */
+    /* position: absolute; */
+    position: relative;
 }
 
-#mainNav>ul>li>a>span{
-    /* border: 1px solid red; */
+#mainNav>ul>li>a>span::before{
+    content: url(/newcode/nc0630/images/mainIcon.png);
+    display: block;
     width: 16px;
     height: 16px;
-    background: url(/nc0630/images/mainIcon.png);
-    display: block;
-    position: relative;
-    top: 5px;
-    left: -1px;
+    position:absolute;
+    top:4px;
+    left: 4px;
+    border: 1px solid red;
+    
+    
 }
+
+
 
     /* #mainNav>ul>li>a:nth-of-type(2)>span::before{
         background-position: -16px 0;
