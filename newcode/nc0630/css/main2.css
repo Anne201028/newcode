@@ -100,7 +100,8 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
 
 #mainNav>ul>li>a{
     /* border: 1px solid red; */
-    display: flex;  
+    display: flex;
+    justify-content: center;  
 }
 
 #mainNav>ul>li>a>span{
@@ -108,11 +109,11 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
     width: 16px;
     height: 16px;
     background: url(/nc0630/images/mainIcon.png);
-        display: block;
+    display: block;
     position: relative;
-    top: 4px;
-    left: 0px;
-    }
+    top: 5px;
+    left: -1px;
+}
 
     /* #mainNav>ul>li>a:nth-of-type(2)>span::before{
         background-position: -16px 0;
