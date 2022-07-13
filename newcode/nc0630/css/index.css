@@ -1,0 +1,90 @@
+main{
+    display: flex;
+    /* align-items: flex-start; */
+    margin: 12px 0;
+}
+
+#news{
+    background-color: rgba(255, 255, 255, 0.3);
+    flex: 0 0 calc(30% - 60px);
+    margin: 0 10px;
+    padding: 20px;
+}
+
+#news ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#news ul li{
+    border-bottom: 1px dashed rgb(18, 53, 18);
+    margin-bottom: 30px;
+    padding: 0 5px 8px 85px;
+    color: rgb(18, 53, 18);
+    font-size: 0.95em;
+    position: relative;
+    text-align: justify
+}
+
+#news ul li time{
+    /* margin-right: 15px; */
+    /* border: 1px solid red; */
+    /* background-color: yellow; */
+    position: absolute;
+    top:0;
+    left: 5px;
+}
+
+.hot::before{
+    content: "Hot";
+    background-color: red;
+    color: white;
+    font-size: 5px;
+    padding: 0 6px;
+    /* border-radius: 5px; */
+    display: inline-block;
+    transform: translate(2px,-5px) scale(0.9) rotate(-10deg);
+}
+
+.promo::before{
+    content:"促銷";
+    background-color:yellow;
+    color:red;
+    font-size: 5px;
+    padding: 0 6px;
+    display: inline-block;
+    transform: scale(0.9) rotate(-10deg);
+}
+#ca{
+    /* background-color: cyan; */
+    flex: 7;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caItem{
+    flex:0 0 calc(50% - 30px);
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 10px 10px 0;
+    padding: 10px;
+}
+
+.caItem h2{
+    font-family: 'Noto Serif TC' serif;
+    font-size: 1.3em;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.2em;
+}
+
+.caItem img{
+    width: 100%;
+}
+
+.caItem p{
+    letter-spacing: 0.15em;
+    line-height: 1.3em;
+    text-align: justify;
+}
+

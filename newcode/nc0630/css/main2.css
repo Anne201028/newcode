@@ -100,22 +100,20 @@ background-image: radial-gradient(at center bottom, rgba(255, 255, 255, 0.6),rgb
 
 #mainNav>ul>li>a{
     border: 1px solid red;
-    /* display: flex; */
-    /* position: absolute; */
     position: relative;
+    /* justify-content: center; */
+    display: flex;
+       
 }
 
-#mainNav>ul>li>a>span::before{
-    content: url(/newcode/nc0630/images/mainIcon.png);
-    display: block;
+.icon{
+    background-image: url(/newcode/nc0630/images/mainIcon.png);
     width: 16px;
     height: 16px;
-    position:absolute;
-    top:4px;
-    left: 4px;
+    top: 4px;
+    left: 16px;
+    display: block;
     border: 1px solid red;
-    
-    
 }
 
 
