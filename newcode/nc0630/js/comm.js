@@ -31,9 +31,9 @@ function setMenu(){
         $('#mainNav').show();
         // $('#mainNav').hide();
         $('#mainNav').css({'top':0,'left':-600});
-        // 這邊設定.css將位置重設，position:ststic。
+        // 這邊設定.css將位置重設，position:static。
         $('#mainNav ul ul').css({
-            'position':'ststic',
+            'position':'static',
             'opacity':1
         }).hide();
         $('#mainNav>ul>li>a').click(function(){
