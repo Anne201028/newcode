@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="/newcode/nc0630/css/product.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
 />
+    <link rel="stylesheet" href="/newcode/nc0630/topBtn/topBtn.css">
     <script src="https://kit.fontawesome.com/25577ac8e1.js" crossorigin="anonymous"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/newcode/nc0630/js/comm.js"></script>
     <script src="/newcode/nc0630/js/product.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="/newcode/nc0630/topBtn/topBtn.js"></script>
     <script>
         $(function(){
             $('footer').load('footerContent.html');
@@ -25,6 +27,7 @@
             $('#productMenu').load('productMenu.html',function(){
                 productMenuEff(1,0);
             })   
+            setTopBtn();
         })
     </script>
 </head>
@@ -104,5 +107,6 @@
     <footer>
 
     </footer>
+    <a href="#" id="topBtn">GoTop</a>
 </body>
 </html>
