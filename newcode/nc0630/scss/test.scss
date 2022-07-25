@@ -1,0 +1,16 @@
+body{
+    background-color: #fff;
+    color: red;
+}
+
+// 在scss裡可以將同一父層的指令寫在一個{}內，存檔後scss會自己轉存為css格式，生成另一個整理好的css檔案
+#contact{
+    color: red;
+ p{
+    color: blue;
+    a{
+        text-decoration: none;
+
+    }
+}
+}
