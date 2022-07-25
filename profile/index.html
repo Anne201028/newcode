@@ -13,6 +13,21 @@
     <script src="WOW-master/dist/wow.min.js"></script>
     <script>
         $(function(){
+
+            var isOpen=false;
+
+                $('#open').click(function(){
+		        if(!isOpen){
+		        	// $('.main').animate({'left':0},500);
+		        	$(this).next().animate({'left':0},500);
+		        	isOpen=true;
+		        }else{
+		        	$(this).next().animate({'left':-200},500);
+		        	isOpen=false;
+		}
+	})
+
+
             $('#content1').parallax('50%',0.3) //設定圖片位置從０％－５０％－１００％，分別為圖片左到右的定位點百分比／頁面捲動時，被選中的圖片會比頁面上的其他物件捲動的較快或較慢
             
             $('[id^="content"] h2').addClass('wow animate__animated animate__fadeInUp').attr('data-wow-offset','200'); //選取id裡開頭符合的項目裡h2的部分進行以下動作.addClass增加class和.attr增加屬性
@@ -22,7 +37,7 @@
             $('#content2 .item').attr('data-wow-offset','200');
 
             $('#content2 .item:nth-of-type(3n+2)').attr('data-wow-delay','0.5');
-            $('#content2 .item:nth-of-type(3n+)').attr('data-wow-delay','1');
+            $('#content2 .item:nth-of-type(3n+2)').attr('data-wow-delay','1');
 
             // 在圖文卡片中，要將卡片依序展示，因為要減少步驟單純用幾行程式碼完成執行
             // 動畫延遲數值需疊加往上0.5,1,1.5,2...
@@ -39,9 +54,9 @@
                 $('header nav ul li a').click(function(){
                     var targetId=$(this).attr('href');
                     var scrollTo=$(targetId).offset().top;
-                    $('html,body').animate({'scrlloTo':scrollTo});
+                    $('html,body').animate({'scrollTo':scrollTo});
                     // $('html. body').animate({'scrollTop':760});
-                    
+
                     return false;
                 })
 
@@ -54,21 +69,26 @@
 
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <!-- class="wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="3s" -->
-        <!-- 持續２秒／延遲３秒播放 -->
-        <h1 class="wow animate__animated animate__tada">Anne J.T.L.</h1>
-        <nav>
-            <ul>
-                <li><a href="#content1">Menu1</a></li>
-                <li><a href="#content2">Menu2</a></li>
-                <li><a href="#content3">Menu3</a></li>
-                <li><a href="#content4">Menu4</a></li>
-                <li><a href="#content5">Menu5</a></li>
-                <li><a href="#content6">Menu6</a></li>
-            </ul>
-        </nav>
+    <header>        
+        <div class="">
+            <a id="open" href="#">open</a>
+            <!-- class="wow animate__animated animate__fadeInDown" data-wow-duration="2s" data-wow-delay="3s" -->
+            <!-- 持續２秒／延遲３秒播放 -->
+            <div>
+                <h1 class="wow animate__animated animate__tada">Anne J.T.L.</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#content1">Menu1</a></li>
+                        <li><a href="#content2">Menu2</a></li>
+                        <li><a href="#content3">Menu3</a></li>
+                        <li><a href="#content4">Menu4</a></li>
+                        <li><a href="#content5">Menu5</a></li>
+                        <li><a href="#content6">Menu6</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
     </header>
     <main>
         <!-- (div#content$>h2{title$}+(p>lorem30)+(p>lorem50))*6 -->

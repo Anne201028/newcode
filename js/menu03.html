@@ -63,12 +63,12 @@ $(function(){
 	var isOpen=false;
     $('a.open').click(function(){
 		if(!isOpen){
-			// $('.main').anㄠimate({'left':0},500);
+			// $('.main').animate({'left':0},500);
 			$(this).parent().animate({'left':0},500);
 			isOpen=true;
 		}else{
 			$(this).parent().animate({'left':-200},500);
-			isOpen=flase;
+			isOpen=false;
 		}
 	})
 });
