@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/menu1.css">
+    <title>導覽列ＪＳ2</title>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // 抓取menu的高度$('#menu').outerHeight()
+            // 用top定位 “－”符號決定 menu這個區塊會被外推到哪個位置
+            $('#menu').css({'top':-$('#menu').outerHeight()})
+            // 宣告 isOpen預設值是關起來的 所以寫成false
+            var isOpen=false;
+            // 設定點擊menuBtn時 會觸發的動作
+            $('#menuBtn').click(function(){
+                
+                if(isOpen){
+                    // isOpen--->true
+                $('#menu').stop().animate({'top':-$('#menu').outerHeight()},1000);
+                //現在點到的物件文字變為下拉，要讓這個物件的位置從上一動作變更為 
+                $(this).html('下拉').stop().animate({'bottom':-$(this).outerHeight()},800)
+                       .css({'border-radius':'0 0 6px 6px'});
+                    isOpen=false
+                }else{
+                    // isOpen--->false
+                $('#menu').stop().animate({'top':0},1000)
+                // 現在點到的物件 文字變為close，使用動畫效果讓這一個物件離父層底部１０px
+                $(this).html('close').stop().animate({'bottom':10},900)
+                       .css({'border-radius':'6px'});
+
+                    //設定menu打開時，文字透明度由0變成１，設定delay讓這個動畫時間延遲0.5秒
+                    // 使用each 在程式裡會先處理第一條 在處理地二條 有點像for迴圈
+                        // (0+1)*500
+                        // (1+1)*500
+                        // (2+1)*500
+                        // (3+1)*500
+                    // 所以會形成文字一個一個出現的動畫畫面
+                    $('#menu ul li').stop().css({'opacity':0,'top':20}).each(function(i){
+                        $(this).delay(500*(i+1)).animate({'opacity':1,'top':0},1000);
+                    
+                    });
+
+                    isOpen=true;
+                }
+                // 使用animate來設定 menu這一塊 被點擊時的動畫位置
+                // $('#menu').animate({'top':0},1000)
+            })
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+            <a id="menuBtn" href="#">下拉</a>
+        </nav>
+        
+    </header>
+
+</body>
+</html>

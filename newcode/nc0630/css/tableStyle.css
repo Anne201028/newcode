@@ -1,0 +1,79 @@
+.ts2 caption, .ts1 caption {
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+.eBase, .ts2, .ts1 {
+  width: 85%;
+  margin: 30px auto;
+}
+
+.ts1 {
+  border: 5px solid #2d5447;
+}
+.ts1 tr:nth-of-type(odd) td {
+  background-color: rgba(45, 84, 71, 0.35);
+}
+.ts1 tr:nth-of-type(even) td {
+  background-color: rgba(45, 84, 71, 0.7);
+}
+.ts1 tr:hover td {
+  color: rgb(255, 255, 255);
+  background-color: #2d5447;
+}
+.ts1 th {
+  border: 1px solid #2d5447;
+  background-color: #2d5447;
+  color: rgb(255, 255, 255);
+  padding: 5px 0px;
+}
+.ts1 td {
+  border: 1px solid #2d5447;
+  padding: 5px;
+}
+.ts1 td:nth-of-type(1) {
+  width: 120px;
+  text-align: center;
+}
+.ts1 td:nth-of-type(3) {
+  width: 100px;
+  text-align: center;
+}
+.ts1 td:nth-of-type(4) {
+  width: 50px;
+  text-align: right;
+}
+
+.ts2 {
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+.ts2 caption {
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+.ts2 tr:nth-of-type(-n+4) td {
+  background-color: rgba(45, 84, 71, 0.3);
+}
+.ts2 tr:nth-of-type(n+5) td {
+  background-color: rgba(45, 84, 71, 0.5);
+}
+.ts2 tr:hover td {
+  background-color: rgba(45, 84, 71, 0.8);
+  color: beige;
+}
+.ts2 td {
+  padding: 8px;
+}
+.ts2 td:nth-of-type(1) {
+  width: 120px;
+  text-align: center;
+}
+.ts2 td:nth-of-type(3) {
+  width: 100px;
+  text-align: center;
+}
+.ts2 td:nth-of-type(4) {
+  width: 50px;
+  text-align: right;
+}
